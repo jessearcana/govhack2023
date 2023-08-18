@@ -1,0 +1,3 @@
+ - Remixes (archives for artistic endeavour) of PROV content using their existing API (SOLR) there.
+ - "Making public archives more accessible " - ACT Memory
+ - https://hackerspace.govhack.org/challenges/discover_heritage_unravel_your_local_stories
