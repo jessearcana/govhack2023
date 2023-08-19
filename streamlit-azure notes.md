@@ -13,6 +13,6 @@ Deploy the template and parameters I modified:
 az deployment group create \
   --name ExampleStreamlit \
   --resource-group Govhack2023 \
-  --template-uri "https://github.com/jessearcana/govhack2023/streamlit-azure-app-services/azuredeploy.json" \
+  --template-uri "https://github.com/jessearcana/govhack2023/blob/main/streamlit-azure-app-services/azuredeploy.json" \
   --parameters '@streamlit-azure.parameters.json'
 ```
