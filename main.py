@@ -1,11 +1,22 @@
 from get_story import get_user_story_audio
 
+
+
 # read json article
 import json
 with open('holiday_data.json') as json_file:
     holiday_data = json.load(json_file)
 with open('tourism_operators.json') as json_file:
     tourist_operators_data = json.load(json_file)
+
+def get_relevant_google_places(vector_in):
+    import pickle as pkl
+    googPlaces = pkl.load(open("googPlacesHoliday.pkl", "rb"))
+    # search faiss index for nearest neighbour
+    k = 1
+    D, I = googPlaces['index'].search(np.array([vector_in]), k) # sanity check: search for user story in holiday data
+    return googPlaces['places'][I[0][0]]
+    
 
 # create a new faiss index
 import faiss
@@ -46,8 +57,8 @@ faiss.write_index(indexTouristOps, "faiss_TouristOps.index")
 
 def process_user_dat(text):
     # record user speech from microphone, pass to google for speech to text conversion
-    story = get_user_story_audio()
-
+    # story = get_user_story_audio()
+    story = text
     # embed user story
     embedding = model.encode(story)
 
@@ -55,13 +66,15 @@ def process_user_dat(text):
     k = 1
     D, I = indexHols.search(np.array([embedding]), k) # sanity check: search for user story in holiday data
     print("Holiday data:")
-    # print(D)
-    # print(I)
-    # print(holiday_data['holidays'][I[0][0]])
+
     D, I = indexTouristOps.search(np.array([embedding]), k) # search for user story in tourist operators data
     print("Tourist operators data:")
-    # print(D)
-    # print(I)
-    # print(tourist_operators_data['tourism_operators'][I[0][0]])
-    output = [holiday_data['holidays'][I[0][0]], tourist_operators_data['tourism_operators'][I[0][0]]]
+    hols_dat = holiday_data['holidays'][I[0][0]]
+    tour_ops = tourist_operators_data['tourism_operators'][I[0][0]]
+    googlePlaces = get_relevant_google_places(embedding)
+    output = [hols_dat, tour_ops, googlePlaces]
     return output
+
+# process_user_dat('wine and golf')
+
+# vector_in = embedding
