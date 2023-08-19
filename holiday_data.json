@@ -1,0 +1,130 @@
+{
+    "holidays": [
+      {
+        "location": "Adelaide",
+        "description": "Explore the vibrant city of Adelaide, known for its arts, culture, and delicious cuisine.",
+        "costing": "$800 per person",
+        "activities": ["Visit Adelaide Central Market", "Explore the Art Gallery of South Australia", "Take a scenic drive to the Adelaide Hills"]
+      },
+      {
+        "location": "Kangaroo Island",
+        "description": "Experience the natural beauty of Kangaroo Island, with its stunning landscapes and diverse wildlife.",
+        "costing": "$1200 per person",
+        "activities": ["Visit Seal Bay Conservation Park", "Explore Flinders Chase National Park", "See Remarkable Rocks"]
+      },
+      {
+        "location": "Barossa Valley",
+        "description": "Indulge in a wine-lover's paradise in the Barossa Valley, famous for its wineries and gourmet food.",
+        "costing": "$1500 per person",
+        "activities": ["Wine tasting at renowned wineries", "Gourmet dining experiences", "Hot air balloon ride over the vineyards"]
+      },
+      {
+        "location": "Eyre Peninsula",
+        "description": "Discover the rugged beauty of the Eyre Peninsula, with its pristine beaches and unique marine life.",
+        "costing": "$1000 per person",
+        "activities": ["Swim with sea lions in Baird Bay", "Explore Coffin Bay National Park", "Try sandboarding on the dunes"]
+      },
+      {
+        "location": "Flinders Ranges",
+        "description": "Embark on an outback adventure in the Flinders Ranges, home to stunning gorges and ancient landscapes.",
+        "costing": "$1300 per person",
+        "activities": ["Hike Wilpena Pound", "Visit Brachina Gorge for geological wonders", "Stargazing in the clear outback skies"]
+      },
+      {
+        "location": "McLaren Vale",
+        "description": "Savor the flavors of McLaren Vale, a region known for its world-class wines and Mediterranean climate.",
+        "costing": "$1100 per person",
+        "activities": ["Wine and food pairing experiences", "Cycle the Shiraz Trail", "Relax on picturesque beaches"]
+      },
+      {
+        "location": "Coober Pedy",
+        "description": "Experience the unique underground lifestyle of Coober Pedy, a mining town famous for its opals.",
+        "costing": "$900 per person",
+        "activities": ["Explore underground homes and churches", "Mine for opals", "Visit the Breakaways for stunning desert views"]
+      },
+      {
+        "location": "Victor Harbor",
+        "description": "Enjoy a coastal escape in Victor Harbor, known for its stunning cliffs, wildlife, and heritage.",
+        "costing": "$950 per person",
+        "activities": ["Ride the Horse-drawn Tram to Granite Island", "Whale watching in Encounter Bay", "Explore Urimbirra Wildlife Park"]
+      },
+      {
+        "location": "Adelaide Hills",
+        "description": "Relax in the picturesque Adelaide Hills, famous for its charming villages, wineries, and landscapes.",
+        "costing": "$1200 per person",
+        "activities": ["Visit Hahndorf, Australia's oldest German settlement", "Explore Mount Lofty Botanic Garden", "Sample local produce at markets"]
+      },
+      {
+        "location": "Port Lincoln",
+        "description": "Embark on an aquatic adventure in Port Lincoln, known as the 'Seafood Capital of Australia'.",
+        "costing": "$1400 per person",
+        "activities": ["Swim with Great White Sharks (cage diving)", "Indulge in fresh seafood dining", "Visit Lincoln National Park"]
+      },
+      {
+        "location": "Yorke Peninsula",
+        "description": "Experience coastal beauty and outdoor activities on the Yorke Peninsula's pristine shores.",
+        "costing": "$1000 per person",
+        "activities": ["Surfing at Moonta Bay", "Explore Innes National Park", "Visit historic mining towns"]
+      },
+      {
+        "location": "Fleurieu Peninsula",
+        "description": "Discover stunning beaches, coastal cliffs, and charming towns on the Fleurieu Peninsula.",
+        "costing": "$1100 per person",
+        "activities": ["Explore McLaren Vale wineries", "Visit the iconic Victor Harbor Granite Island", "Hike the Heysen Trail"]
+      },
+      {
+        "location": "Murray River",
+        "description": "Enjoy a leisurely river escape along the Murray River, surrounded by picturesque landscapes.",
+        "costing": "$900 per person",
+        "activities": ["Houseboat cruise along the river", "Fishing and water sports", "Visit historic river towns"]
+      },
+      {
+        "location": "Robe",
+        "description": "Relax in the charming coastal town of Robe, known for its historic buildings and sandy beaches.",
+        "costing": "$950 per person",
+        "activities": ["Visit Long Beach and the Obelisk", "Explore Little Dip Conservation Park", "Sample local seafood"]
+      },
+      {
+        "location": "Mount Gambier",
+        "description": "Discover the unique natural wonders of Mount Gambier, including the famous Blue Lake and sinkholes.",
+        "costing": "$1000 per person",
+        "activities": ["Visit Blue Lake in its vibrant blue color", "Explore Umpherston Sinkhole", "Hike the Centenary Tower"]
+      },
+      {
+        "location": "Clare Valley",
+        "description": "Experience a relaxing wine retreat in Clare Valley, known for its Riesling wines and picturesque countryside.",
+        "costing": "$1200 per person",
+        "activities": ["Wine tasting at boutique wineries", "Cycling through vineyard trails", "Visit Sevenhill Cellars, the oldest winery in the region"]
+      },
+      {
+        "location": "Port Augusta",
+        "description": "Explore the gateway to the outback, Port Augusta, and its surrounding desert landscapes.",
+        "costing": "$800 per person",
+        "activities": ["Visit the Wadlata Outback Centre", "Explore the Australian Arid Lands Botanic Garden", "Scenic drive to the Flinders Ranges"]
+      },
+      {
+        "location": "Murray Bridge",
+        "description": "Enjoy a relaxing escape in Murray Bridge, with its riverside charm and outdoor activities.",
+        "costing": "$850 per person",
+        "activities": ["Cruise on the paddle steamer PS Murray Princess", "Explore Monarto Safari Park", "Try watersports on the river"]
+      },
+      {
+        "location": "Burra",
+        "description": "Step back in time in the historic town of Burra, known for its well-preserved 19th-century architecture.",
+        "costing": "$900 per person",
+        "activities": ["Visit the Burra Mine", "Explore heritage-listed buildings", "Walk the Burra Heritage Trail"]
+      },
+      {
+        "location": "Naracoorte",
+        "description": "Uncover ancient fossils and natural wonders in Naracoorte, a UNESCO-listed fossil site.",
+        "costing": "$950 per person",
+        "activities": ["Explore Naracoorte Caves National Park", "Visit the World Heritage-listed Naracoorte Fossil Centre", "Learn about Australia's prehistoric past"]
+      },
+      {
+        "location": "Limestone Coast",
+        "description": "Experience the rugged beauty of the Limestone Coast, with its dramatic cliffs and coastal scenery.",
+        "costing": "$1100 per person",
+        "activities": ["Visit the Blue Lake in Mount Gambier", "Explore Piccaninnie Ponds for underwater wonders", "Hike the Canunda National Park"]
+      }
+    ]
+  }  
