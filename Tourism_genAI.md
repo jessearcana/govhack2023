@@ -11,6 +11,14 @@ Primary flow (general):
    - contains similar visual elements (people, buildings, animals etc)
    - Activities for a trip plan
 
+Why? Problem statement and/or Value proposition
+- Current solutions:
+  - travel agent
+  - Pinterest
+  - Friend's Facebook/insta/etc.
+  - Angus' mastodon server
+  - SA govt promotions like travel vouchers
+
 User flow (tourism or maybe also remix):
 - Admin user defines some basic parameters - eg tourism drive in South Australia
 - End users land on a web page that gives an initial impression of the potential value based on admin params and maybe other users' feedback.
