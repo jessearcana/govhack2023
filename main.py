@@ -57,11 +57,12 @@ faiss.write_index(indexTouristOps, "faiss_TouristOps.index")
 ### #####################
 
 def process_user_dat(text):
-    # record user speech from microphone, pass to google for speech to text conversion
-    # story = get_user_story_audio()
+
     story = text
+
     # embed user story
     embedding = model.encode(story)
+
 
     # search faiss index for nearest neighbour
     k = 1

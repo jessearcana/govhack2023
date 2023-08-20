@@ -5,3 +5,4 @@ faiss-cpu
 sentence_transformers
 streamlit_chat
 python-google-places
+tiktoken
