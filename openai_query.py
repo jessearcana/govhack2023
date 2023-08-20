@@ -26,28 +26,16 @@ def get_openAI_story(token_count,customers="Not specified, assume a family from 
 Holiday Customer:{}
 Previous holidays, sights and activities:{}
 Proposed holiday ideas:{}
-Generate a potential holiday story 3 paragraphs, about 500 words in total:
+Generate a potential holiday story 3 paragraphs long, about 500 words in total:
 """.format(customers,previous,proposed)
-    chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",max_tokens=700, messages=[{"role": "system", "content": story_system_role}, {"role": "user", "content": story_input}])
+    chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo",max_tokens=600, messages=[{"role": "system", "content": story_system_role}, {"role": "user", "content": story_input}])
     return chat_completion.choices[0].message.content
 
 def get_key_activities(story):
     prompt="""
-Given the following story you generated for this customer, summarise the activities and places mentioned in the story, prioritising things that might require bookings or enquiries. Where possible, combine each activity with the relevant place. Put each activity and place succinctly on a new line. For example:
-Story:
-Their journey began in Adelaide, a city known for its art, culture, and vibrant atmosphere. The first leg of their adventure took them to the world-renowned Barossa Valley, a region famous for its exquisite wines and picturesque vineyards. The family indulged in wine tastings and learned about the winemaking process, all while taking in the lush scenery that surrounded them. They even had the chance to pick fresh grapes and create their very own signature blend as a keepsake of their visit.
-
-From the Barossa, the Johnsons headed north towards the striking Flinders Ranges. Here, they encountered an awe-inspiring landscape of ancient rock formations, dramatic gorges, and sweeping plains. They embarked on breathtaking hikes, discovering unique wildlife and rare plant species that called the Flinders Ranges home. The children's curiosity was piqued by the indigenous history of the area, and they engaged in interactive experiences to learn about the rich culture and traditions of the Adnyamathanha people.
-
-Activities:
-Wine tasting in the Barossa Valley
-Sight-seeing in the Barossa Valley
-Create your own wine blend in the Barossa Valley
-Sight-seeing in the Flinders Ranges
-Hiking in the Flinders Ranges
-Learning about Indigenous culture in the Flinders Ranges
+Given the following story you generated for this customer, list the key activities and places mentioned in the story, prioritising things that might require bookings or enquiries. Where possible, combine each activity with the relevant place. Put each activity and place succinctly on a new line. One activity and place per line - max 10 lines.
 
 Story:
 """
-    activities=openai.ChatCompletion.create(model="gpt-3.5-turbo",max_tokens=150, messages=[{"role": "system", "content": story_system_role}, {"role": "user", "content": prompt}])
+    activities=openai.ChatCompletion.create(model="gpt-3.5-turbo",max_tokens=300, messages=[{"role": "system", "content": story_system_role}, {"role": "user", "content": prompt}])
     return activities.choices[0].message.content

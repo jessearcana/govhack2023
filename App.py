@@ -23,12 +23,12 @@ def load_index(index_path):
     index = faiss.read_index(index_path)
     return index
 
-@st.cache_data(persist="disk") # cache the input and response for each basic user input sent to OpenAI - mainly so when we repeat a test we don't hit the API
+# @st.cache_data(persist="disk") # cache the input and response for each basic user input sent to OpenAI - mainly so when we repeat a test we don't hit the API
 def openai_story(text_input,token_count):
     story = openai_query.get_openAI_story(previous=text_input,token_count=token_count)
     return story
 
-@st.cache_data(persist="disk") # cache the input and response for each basic user input sent to OpenAI - mainly so when we repeat a test we don't hit the API
+# @st.cache_data(persist="disk") # cache the input and response for each basic user input sent to OpenAI - mainly so when we repeat a test we don't hit the API
 def get_key_activities(story):
     key_activities = openai_query.get_key_activities(story)
     sentencify=re.sub(r'\n','.\n',key_activities)
@@ -59,12 +59,14 @@ if "past" not in st.session_state:
     st.session_state["past"] = []
 
 def get_text():
-    input_text = st.text_input("Text: ", "", key="input")
+    input_text = st.text_area("Tell us about recent holiday experiences (anywhere) that you think are relevant to understand the kinds of things you might like. For an example try the default pre-populated content: (100 to 200 words is good)", value="We spent 2 weeks touring around Melbourne and Victoria. We really enjoyed swimming, wine tasting and the food in Mornington peninsula. The accommodation was right near the beach and we had fish and chips on the beach. The area had a historic old court house (pictured here: https://prov.vic.gov.au/archive/851C686B-F7EA-11E9-AE98-1F3D2DB4AC9B) and we enjoyed learning about it. We also visited the Grampians and stayed at the Hall's gap camping area (which historically looked like this: https://prov.vic.gov.au/archive/7F0F7D3A-F7EA-11E9-AE98-F771DF383C74?image=10). The drive from Mornington to Hall's gap was long which was quite tiring.", key="input")
     return input_text
 
 user_input, token_count = trim_input(get_text())
 
-if user_input:
+go_button=st.button('Make me a holiday!')
+
+if (go_button==True and user_input) :
     story = openai_story(user_input,token_count)
     key_activities = get_key_activities(story)
     activity_providers = process_user_dat(key_activities) #qa_chain({'question': user_input,'chat_history':[]})

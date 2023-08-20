@@ -80,6 +80,5 @@ def process_user_dat(text):
 # process_user_dat('wine and golf')
 
 # vector_in = embedding
-output = process_user_dat("tell me abnout a mountain biking holiday for a family of four")
-narrative = openai_query.get_openAI_summary(output)
-print(narrative)
+# output = process_user_dat("tell me abnout a mountain biking holiday for a family of four")
+# narrative = openai_query.get_openAI_summary(output)
