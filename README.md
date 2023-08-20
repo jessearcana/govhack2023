@@ -44,9 +44,9 @@ There are many possibilities to extend this platform to improve usability. Some 
 
 # Featured datasets
 
-Google Places
-Synthetic data
-Australian Tourism Data Warehouse (ATDW)
+ - Google Places
+ - Synthetic data
+ - Australian Tourism Data Warehouse (ATDW)
 
 # last slide
 Heaps Good has been made by the Adelaide consultancy, Apex Arcana. We specialise in data science and helping people to make the most of their data. Please talk to use about how we can help you.
