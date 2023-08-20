@@ -1,4 +1,5 @@
 streamlit>1.23.0
+openai
 numpy
 faiss-cpu
 sentence_transformers
