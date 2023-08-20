@@ -26,6 +26,12 @@ Tourism SA, because of its non-commercial nature, has an opportunity to build a 
 
 Our portal will, over time, create a dataset of its own from which it can learn and thus improve performance
 
+# Data Sets
+
+Google Places
+Synthetic data
+Australian Tourism Data Warehouse (ATDW)
+
 # Commercial vision
 We believe that Heaps Good can become the main way of planning holidays in South Australia, and a significant commercial advantage for the state. By keeping the portal itself non-commercial, it can focus on delivering the best outcome for tourists, leading to better experience, repeat custom, and word-of-mouth effects.
 
