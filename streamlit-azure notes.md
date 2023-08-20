@@ -16,3 +16,5 @@ az deployment group create \
   --template-uri "https://github.com/jessearcana/govhack2023/blob/main/streamlit-azure-app-services/azuredeploy.json" \
   --parameters '@streamlit-azure.parameters.json'
 ```
+
+In the end the demo app worked although the template was janky. Running faiss in a webapp though was not viable.
