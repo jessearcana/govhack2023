@@ -33,7 +33,7 @@ We believe that Heaps Good can become the main way of planning holidays in South
 
 This is currently a proof-of-concept product only.
 
-There are many posibilities to extend this platform to improve usability. Some ideas are that it more-effectively considers:
+There are many possibilities to extend this platform to improve usability. Some ideas are that it more-effectively considers:
  - transport between activities, inlcuding mapping
  - client classification to make inferences about wants (for example, clients who play golf might also like drinking wine, whereas clients who enjoy go-kart racing might prefer beer). There are thousands of similar inferences that can be made by analysing the communication received from the client - the words they use, the manner of expression, the sound of their voice, their travel companions, etc
  - finding "Hidden Gems" (for those who want them), such as the rock pool at Innes National Park, Stokes Bay, or Skillogalee Winery
@@ -41,6 +41,8 @@ There are many posibilities to extend this platform to improve usability. Some i
  - making a learning system that understands the sorts of recommendations that different people respond well to
  We have the knowledge and skill to implement all of the above, but have not done so due to time constraints.
  - improving the database of available destinations
+
+# Featured datasets
 
 
 # last slide
