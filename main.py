@@ -1,4 +1,5 @@
 #from get_story import get_user_story_audio
+import openai_query
 
 
 
@@ -65,10 +66,10 @@ def process_user_dat(text):
     # search faiss index for nearest neighbour
     k = 1
     D, I = indexHols.search(np.array([embedding]), k) # sanity check: search for user story in holiday data
-    print("Holiday data:")
+    # print("Holiday data:")
 
     D, I = indexTouristOps.search(np.array([embedding]), k) # search for user story in tourist operators data
-    print("Tourist operators data:")
+    # print("Tourist operators data:")
     hols_dat = holiday_data['holidays'][I[0][0]]
     tour_ops = tourist_operators_data['tourism_operators'][I[0][0]]
     googlePlaces = get_relevant_google_places(embedding)
@@ -78,3 +79,6 @@ def process_user_dat(text):
 # process_user_dat('wine and golf')
 
 # vector_in = embedding
+output = process_user_dat("tell me abnout a mountain biking holiday for a family of four")
+narrative = openai_query.get_openAI_summary(output)
+print(narrative)

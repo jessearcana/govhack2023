@@ -8,6 +8,7 @@ import json
 import faiss
 from sentence_transformers import SentenceTransformer
 from streamlit_chat import message
+import openai_query
 
 import streamlit as st
 # from audio_recorder_streamlit import audio_recorder
@@ -51,8 +52,9 @@ from main import process_user_dat
 
 if user_input:
     output = process_user_dat(user_input) #qa_chain({'question': user_input,'chat_history':[]})
+    narrative = openai_query.get_openAI_summary(output)
     st.session_state.past.append(user_input)
-    st.session_state.generated.append(str(output))
+    st.session_state.generated.append(str(output) + "\n\n" + str(narrative))
 
 if st.session_state["generated"]:
     for i in range(len(st.session_state["generated"]) - 1, -1, -1):
