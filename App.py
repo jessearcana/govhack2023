@@ -21,9 +21,14 @@ import streamlit as st
 st.set_page_config(page_title="Holiday Assistant", page_icon=":robot:")
 st.header("Holiday Assistant")
 
-indexHols = faiss.read_index('faiss_Holidays.index')
-indexTouristOps = faiss.read_index('faiss_TouristOps.index')
-model = SentenceTransformer('msmarco-distilbert-base-dot-prod-v3') # bert-base-nli-mean-tokens
+@st.cache_data
+def load_index(index_path):
+    index = faiss.read_index(index_path)
+    return index
+
+indexHols = load_index('faiss_Holidays.index')
+indexTouristOps = load_index('faiss_TouristOps.index')
+# model = SentenceTransformer('msmarco-distilbert-base-dot-prod-v3') # bert-base-nli-mean-tokens
 
 
 # read json article
